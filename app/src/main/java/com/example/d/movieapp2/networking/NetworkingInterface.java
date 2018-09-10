@@ -10,7 +10,7 @@ public interface NetworkingInterface {
 
     String API_KEY = "05064d0ea0a59b3c717097a5d3851776";
 
-    //String BASEURL = "";
+    String BASEURL = "https://api.themoviedb.org/3/movie/550?api_key=05064d0ea0a59b3c717097a5d3851776";
 
 
 
