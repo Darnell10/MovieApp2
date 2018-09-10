@@ -7,7 +7,14 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface NetworkingInterface {
+
     String API_KEY = "05064d0ea0a59b3c717097a5d3851776";
+
+    String BASEURL = "https://api.themoviedb.org/3/movie/550?api_key=05064d0ea0a59b3c717097a5d3851776";
+
+
+
+    //@GET("/discover/movie?sort_by=popularity.desc")
 
     @GET("discover/movie")
     Observable<Movie_Response> getMovies(@Query(API_KEY) String apiKey, @Query("sort_by") String query);
