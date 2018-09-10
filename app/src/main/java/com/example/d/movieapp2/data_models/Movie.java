@@ -142,8 +142,8 @@ public class Movie {
         this.popularity = popularity;
     }
 
-    public int getPosterPath() {
-        return Integer.parseInt(posterPath);
+    public String getPosterPath() {
+        return posterPath;
     }
 
     public void setPosterPath(String posterPath) {

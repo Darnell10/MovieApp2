@@ -18,29 +18,27 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Callback;
+
 public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Holder> {
 
-    ArrayList<Movie> movieList;
-    Context context;
+    List<Movie> movieList;
 
-    public Movie_Adapter(List<Movie> results, MainActivity mainActivity) {
-        this.movieList = movieList;
-        this.context= context;
-
+    public Movie_Adapter(List<Movie> movies, Callback<Movie_Response> callback) {
+        movieList =movies;
     }
 
 
     @NonNull
     @Override
     public Movie_Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.movie_layout,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_layout,parent,false);
         return new Movie_Holder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull Movie_Holder holder, int position) {
 
-        holder.movieImage.setImageResource(movieList.get(position).getPosterPath());
         holder.movieTitle.setText(movieList.get(position).getTitle());
         holder.overView.setText(movieList.get(position).getOverview());
         holder.releaseDate.setText(movieList.get(position).getReleaseDate());
