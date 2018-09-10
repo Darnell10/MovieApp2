@@ -1,4 +1,4 @@
-package com.example.d.movieapp2.presenation;
+package com.example.d.movieapp2.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,19 +10,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.d.movieapp2.R;
-import com.example.d.movieapp2.data_models.Result;
+import com.example.d.movieapp2.data_models.Movie;
+import com.example.d.movieapp2.data_models.Movie_Response;
 import com.example.d.movieapp2.ui.MainActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Holder> {
+public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Holder> {
 
-    ArrayList<Result> movieList;
+    ArrayList<Movie> movieList;
     Context context;
 
-    public Movie_Adapter(List<Result> results, MainActivity mainActivity) {
+    public Movie_Adapter(List<Movie> results, MainActivity mainActivity) {
         this.movieList = movieList;
         this.context= context;
 
@@ -39,10 +40,11 @@ class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Holder> {
     @Override
     public void onBindViewHolder(@NonNull Movie_Holder holder, int position) {
 
+        holder.movieImage.setImageResource(movieList.get(position).getPosterPath());
         holder.movieTitle.setText(movieList.get(position).getTitle());
         holder.overView.setText(movieList.get(position).getOverview());
         holder.releaseDate.setText(movieList.get(position).getReleaseDate());
-        Result movieResult = movieList.get(position);
+        Movie movieResult = movieList.get(position);
         holder.onBind(movieResult);
 
 //                .load("https://image.themoviedb.org/3/movie/550"+movieList
@@ -73,7 +75,7 @@ class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Holder> {
             movieImage = itemView.findViewById(R.id.movie_imageview);
         }
 
-        public void onBind(Result movieResult) {
+        public void onBind(Movie movieResult) {
             Picasso.with(itemView.getContext())
                     .load(movieResult.getPosterPath())
                     .into(movieImage);

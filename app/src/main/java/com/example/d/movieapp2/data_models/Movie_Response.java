@@ -21,13 +21,13 @@ public class Movie_Response {
 
     @SerializedName("results")
     @Expose
-    private List<Result> results = null;
+    private List<Movie> results = null;
 
     public Movie_Response(){
 
     }
 
-    public Movie_Response(Integer page, Integer totalResults, Integer totalPages, List<Result> results) {
+    public Movie_Response(Integer page, Integer totalResults, Integer totalPages, List<Movie> results) {
         this.page = page;
         this.totalResults = totalResults;
         this.totalPages = totalPages;
@@ -58,11 +58,11 @@ public class Movie_Response {
         this.totalPages = totalPages;
     }
 
-    public List<Result> getResults() {
+    public List<Movie> getResults() {
         return results;
     }
 
-    public void setResults(List<Result> results) {
+    public void setResults(List<Movie> results) {
         this.results = results;
     }
 }
