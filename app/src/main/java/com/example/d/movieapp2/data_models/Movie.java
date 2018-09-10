@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Result {
+public class Movie {
 
     @SerializedName("vote_count")
     @Expose
@@ -63,13 +63,20 @@ public class Result {
     @Expose
     private String releaseDate;
 
+    private List<Movie_Response> movie_responses;
 
-    public Result(){
+    public Movie(){
 
     }
 
 
-    public Result(int voteCount, int id, Boolean video, Float voteAverage, String title, Float popularity, String posterPath, String originalLanguage, String originalTitle, List<Integer> genreIds, String backdropPath, Boolean adult, String overview, String releaseDate) {
+    public List<Movie_Response> getMovie_responses() {
+        return movie_responses;
+    }
+
+
+
+    public Movie(int voteCount, int id, Boolean video, Float voteAverage, String title, Float popularity, String posterPath, String originalLanguage, String originalTitle, List<Integer> genreIds, String backdropPath, Boolean adult, String overview, String releaseDate , List<Movie_Response> movie_responses) {
         this.voteCount = voteCount;
         this.id = id;
         this.video = video;
@@ -84,6 +91,7 @@ public class Result {
         this.adult = adult;
         this.overview = overview;
         this.releaseDate = releaseDate;
+        this.movie_responses = movie_responses;
     }
 
     public int getVoteCount() {
@@ -134,8 +142,8 @@ public class Result {
         this.popularity = popularity;
     }
 
-    public String getPosterPath() {
-        return posterPath;
+    public int getPosterPath() {
+        return Integer.parseInt(posterPath);
     }
 
     public void setPosterPath(String posterPath) {
@@ -196,5 +204,13 @@ public class Result {
 
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
+    }
+
+//    public List<Movie_Response> getMovie_responses(List<Movie_Response> movie_responses){
+//        return movie_responses;
+//    }
+
+    public void setMovie_responses(List<Movie_Response> movie_responses) {
+        this.movie_responses = movie_responses;
     }
 }
