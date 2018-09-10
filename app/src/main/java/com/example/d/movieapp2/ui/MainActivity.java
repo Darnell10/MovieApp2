@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
     List<Movie> movies;
 
-    @BindView(R.id.movie_imageview) ImageView movieImageview;
-
-    @BindView(R.id.movie_title) TextView movieTitle;
-
-    @BindView(R.id.release_date)TextView releaseDate;
-
-    @BindView(R.id.overview)TextView overView;
+//    @BindView(R.id.movie_imageview) ImageView movieImageview;
+//
+//    @BindView(R.id.movie_title) TextView movieTitle;
+//
+//    @BindView(R.id.release_date)TextView releaseDate;
+//
+//    @BindView(R.id.overview)TextView overView;
 
     @BindView(R.id.recyclerview_view) RecyclerView recyclerView;
 
@@ -63,8 +63,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
         setRetrofit();
-        setRecyclerView(movies);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+
+
+
+
 
 
     }
@@ -90,10 +95,12 @@ public class MainActivity extends AppCompatActivity {
                 if(movie_response != null){
 
                     for (Movie movie : movies) {
-                        Log.d("MOVIE", "onResponse: " + movie.getTitle());
+                        Log.d("MOVIE", "onResponse: " + movie.getPosterPath());
                     }
                 }
-                setRecyclerView(movies);
+                movie_adapter = new Movie_Adapter(movies,this);
+                recyclerView.setAdapter(movie_adapter);
+                //setRecyclerView(movies);
 
             }
 
@@ -109,11 +116,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void setRecyclerView(List<Movie> movies){
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
-        movie_adapter = new Movie_Adapter(movies,this);
-        recyclerView.setAdapter(movie_adapter);
-    }
+//    public void setRecyclerView(List<Movie> movies){
+//        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+//        movie_adapter = new Movie_Adapter(movies,this);
+//        recyclerView.setAdapter(movie_adapter);
+//    }
 
 
 }
