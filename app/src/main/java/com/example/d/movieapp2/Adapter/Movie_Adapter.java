@@ -25,14 +25,14 @@ public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Hold
     List<Movie> movieList;
 
     public Movie_Adapter(List<Movie> movies, Callback<Movie_Response> callback) {
-        movieList =movies;
+        movieList = movies;
     }
 
 
     @NonNull
     @Override
     public Movie_Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_layout,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_layout, parent, false);
         return new Movie_Holder(view);
     }
 
@@ -74,8 +74,9 @@ public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Hold
         }
 
         public void onBind(Movie movieResult) {
+            String urlPath = "https://image.tmdb.org/t/p/w500" + movieResult.getPosterPath();
             Picasso.with(itemView.getContext())
-                    .load(movieResult.getPosterPath())
+                    .load(urlPath)
                     .into(movieImage);
         }
     }

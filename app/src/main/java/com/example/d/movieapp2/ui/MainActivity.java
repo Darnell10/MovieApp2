@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.e("I Have a response", "Response");
 
+                Log.d("URL", String.valueOf(call.request()));
+
                 List<Movie> movies = movie_response.getResults();
                 if(movie_response != null){
 
