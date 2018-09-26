@@ -20,12 +20,6 @@ public interface NetworkingInterface {
     @GET("movie/top_rated")
     Call<Movie_Response> getTopratedMovies(@Query("api_key") String apiKey);
 
-//
-//    @GET("/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22")
-//    Call<Movie_Response>getMovies(@Path())
-//
-//    @GET("discover/movie")
-//    Call<Movie_Response> getMovies(@Query(API_KEY) String apiKey, @Query("sort_by") String query);
 
 
 }

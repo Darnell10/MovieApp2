@@ -1,6 +1,5 @@
 package com.example.d.movieapp2.Adapter;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,10 +11,8 @@ import android.widget.TextView;
 import com.example.d.movieapp2.R;
 import com.example.d.movieapp2.data_models.Movie;
 import com.example.d.movieapp2.data_models.Movie_Response;
-import com.example.d.movieapp2.ui.MainActivity;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Callback;
@@ -44,9 +41,6 @@ public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Hold
         holder.releaseDate.setText(movieList.get(position).getReleaseDate());
         Movie movieResult = movieList.get(position);
         holder.onBind(movieResult);
-
-//                .load("https://image.themoviedb.org/3/movie/550"+movieList
-//                        .get(position).getPosterPath()).into(holder.movieImage);
 
     }
 
