@@ -30,32 +30,16 @@ import static com.example.d.movieapp2.networking.NetworkingInterface.BASE_URL;
 public class MainActivity extends AppCompatActivity {
 
 
-
     private NetworkingInterface networkInterface;
 
     private Movie_Adapter movie_adapter;
 
-    private Movie result;
-
-    private Movie_Response movie_response;
 
     Retrofit retrofit;
 
-    List<Movie> movies;
 
-//    @BindView(R.id.movie_imageview) ImageView movieImageview;
-//
-//    @BindView(R.id.movie_title) TextView movieTitle;
-//
-//    @BindView(R.id.release_date)TextView releaseDate;
-//
-//    @BindView(R.id.overview)TextView overView;
-
-    @BindView(R.id.recyclerview_view) RecyclerView recyclerView;
-
-
-
-
+    @BindView(R.id.recyclerview_view)
+    RecyclerView recyclerView;
 
 
     @Override
@@ -66,10 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         setRetrofit();
         recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
-
-
-
-
 
 
     }
@@ -87,20 +67,20 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<Movie_Response>() {
             @Override
             public void onResponse(Call<Movie_Response> call, Response<Movie_Response> response) {
-                Movie_Response  movie_response = response.body();
+                Movie_Response movie_response = response.body();
 
                 Log.e("I Have a response", "Response");
 
                 Log.d("URL", String.valueOf(call.request()));
 
                 List<Movie> movies = movie_response.getResults();
-                if(movie_response != null){
+                if (movie_response != null) {
 
                     for (Movie movie : movies) {
                         Log.d("MOVIE", "onResponse: " + movie.getPosterPath());
                     }
                 }
-                movie_adapter = new Movie_Adapter(movies,this);
+                movie_adapter = new Movie_Adapter(movies, this);
                 recyclerView.setAdapter(movie_adapter);
                 //setRecyclerView(movies);
 
@@ -117,12 +97,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-//    public void setRecyclerView(List<Movie> movies){
-//        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
-//        movie_adapter = new Movie_Adapter(movies,this);
-//        recyclerView.setAdapter(movie_adapter);
-//    }
 
 
 }

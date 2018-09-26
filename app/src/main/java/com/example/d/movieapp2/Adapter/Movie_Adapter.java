@@ -45,9 +45,6 @@ public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Hold
         Movie movieResult = movieList.get(position);
         holder.onBind(movieResult);
 
-//                .load("https://image.themoviedb.org/3/movie/550"+movieList
-//                        .get(position).getPosterPath()).into(holder.movieImage);
-
     }
 
     @Override
