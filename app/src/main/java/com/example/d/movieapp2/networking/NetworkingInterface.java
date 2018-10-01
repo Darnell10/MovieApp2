@@ -20,6 +20,14 @@ public interface NetworkingInterface {
     @GET("movie/top_rated")
     Call<Movie_Response> getTopratedMovies(@Query("api_key") String apiKey);
 
+    @GET("movie/now_playing")
+    Call<Movie_Response> getNowPlaying(@Query("api_key") String apiKey);
+
+    @GET("movie/upcoming")
+    Call<Movie_Response> getUpcomingMovies(@Query("api_key")String apiKey);
+
+
+
 
 
 }
