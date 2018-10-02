@@ -14,38 +14,26 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
 
-    private Button popularButton;
-    private Button topRated;
-    private Button upComing;
-    private Button nowPlaying;
+    @BindView(R.id.popular_button)
+    Button popularButton;
 
+    @BindView(R.id.top_rated)
+    Button topRated;
 
-//    @BindView(R.id.popular_button)
-//    Button popularButton;
-//
-//    @BindView(R.id.top_rated)
-//    Button topRated;
-//
-//    @BindView(R.id.upcoming_movies)
-//    Button upComing;
-//
-//    @BindView(R.id.now_playing_button)
-//    Button nowPlaying;
+    @BindView(R.id.upcoming_movies)
+    Button upComing;
+
+    @BindView(R.id.now_playing_button)
+    Button nowPlaying;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //ButterKnife.bind(this);
+        ButterKnife.bind(this);
 
-        popularButton = findViewById(R.id.popular_button);
 
-        topRated = findViewById(R.id.top_rated);
-
-        upComing = findViewById(R.id.upcoming_movies);
-
-        nowPlaying = findViewById(R.id.now_playing_button);
         popButton();
 
         topButton();
