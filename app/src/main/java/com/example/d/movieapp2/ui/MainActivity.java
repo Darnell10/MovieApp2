@@ -1,8 +1,10 @@
 package com.example.d.movieapp2.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -51,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Log.d("PRESSED", "POPULAR");
+
+                Intent intent = new Intent(v.getContext(), Popular_Activity.class);
+                v.getContext().startActivity(intent);
+
             }
         });
 
@@ -62,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Log.d("PRESSED", "TOP");
             }
         });
     }
@@ -71,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Log.d("PRESSSED", "Upcoming");
             }
         });
 
@@ -82,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Log.d("PRESSSED", "Now Playing ");
             }
         });
     }
