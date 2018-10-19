@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Popular_Activity"></activity>
+        <activity android:name=".ui.Popular_Activity" />
+        <activity android:name=".ui.TopRatedActivity" />
+        <activity android:name=".ui.NowPlayingActivity" />
+        <activity android:name=".ui.UpcomingActivity"></activity>
     </application>
 
 </manifest>
