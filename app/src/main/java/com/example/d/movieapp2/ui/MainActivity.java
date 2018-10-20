@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void popButton(){
+    public void popButton() {
 
         popularButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void topButton(){
+    public void topButton() {
 
         topRated.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,21 +71,21 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("PRESSED", "TOP");
 
-                Intent topIntent = new Intent(v.getContext(),TopRatedActivity.class);
+                Intent topIntent = new Intent(v.getContext(), TopRatedActivity.class);
                 v.getContext().startActivity(topIntent);
 
             }
         });
     }
 
-    public void upComingButton(){
-        nowPlaying.setOnClickListener(new View.OnClickListener() {
+    public void upComingButton() {
+        upComing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Log.d("PRESSED", "Upcoming");
 
-                Intent upComingIntent = new Intent(v.getContext(),UpcomingActivity.class);
+                Intent upComingIntent = new Intent(v.getContext(), UpcomingActivity.class);
                 v.getContext().startActivity(upComingIntent);
             }
         });
@@ -93,14 +93,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void nowPlayingButton(){
-        upComing.setOnClickListener(new View.OnClickListener() {
+    public void nowPlayingButton() {
+        nowPlaying.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Log.d("PRESSSED", "Now Playing ");
+                Log.d("PRESSED", "Now Playing ");
 
-                Intent nowplayingIntent = new Intent(v.getContext(),NowPlayingActivity.class);
+                Intent nowplayingIntent = new Intent(v.getContext(), NowPlayingActivity.class);
                 v.getContext().startActivity(nowplayingIntent);
             }
         });

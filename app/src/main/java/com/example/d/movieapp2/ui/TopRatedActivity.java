@@ -19,6 +19,6 @@ public class TopRatedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top_rated);
 
-        topRated_recyclerView.setLayoutManager(new GridLayoutManager(this,1));
+
     }
 }
