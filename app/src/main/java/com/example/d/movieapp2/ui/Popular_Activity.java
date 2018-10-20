@@ -36,8 +36,8 @@ public class Popular_Activity extends AppCompatActivity {
     Retrofit retrofit;
 
 
-    @BindView(R.id.recyclerview_view)
-    RecyclerView recyclerView;
+    @BindView(R.id.popular_rv)
+    RecyclerView popular_RecyclerView;
 
 
     @Override
@@ -47,7 +47,7 @@ public class Popular_Activity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setRetrofit();
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+        popular_RecyclerView.setLayoutManager(new GridLayoutManager(this, 1));
 
 
     }
@@ -79,7 +79,7 @@ public class Popular_Activity extends AppCompatActivity {
                     }
                 }
                 movie_adapter = new Movie_Adapter(movies, this);
-                recyclerView.setAdapter(movie_adapter);
+                popular_RecyclerView.setAdapter(movie_adapter);
                 //setRecyclerView(movies);
 
             }
