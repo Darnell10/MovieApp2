@@ -19,6 +19,5 @@ public class UpcomingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upcoming);
 
-        upcomingRecyclerView.setLayoutManager(new GridLayoutManager(this,1));
     }
 }
