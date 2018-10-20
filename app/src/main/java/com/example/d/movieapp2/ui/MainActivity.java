@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("PRESSED", "POPULAR");
 
-                Intent intent = new Intent(v.getContext(), Popular_Activity.class);
-                v.getContext().startActivity(intent);
+                Intent popularIntent = new Intent(v.getContext(), Popular_Activity.class);
+                v.getContext().startActivity(popularIntent);
 
             }
         });
@@ -70,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Log.d("PRESSED", "TOP");
+
+                Intent topIntent = new Intent(v.getContext(),TopRatedActivity.class);
+                v.getContext().startActivity(topIntent);
+
             }
         });
     }
@@ -79,7 +83,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Log.d("PRESSSED", "Upcoming");
+                Log.d("PRESSED", "Upcoming");
+
+                Intent upComingIntent = new Intent(v.getContext(),UpcomingActivity.class);
+                v.getContext().startActivity(upComingIntent);
             }
         });
 
@@ -92,6 +99,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Log.d("PRESSSED", "Now Playing ");
+
+                Intent nowplayingIntent = new Intent(v.getContext(),NowPlayingActivity.class);
+                v.getContext().startActivity(nowplayingIntent);
             }
         });
     }
