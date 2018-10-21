@@ -1,5 +1,5 @@
 # MovieApp2
-Movie App the shows the popular movies along with release date, Details, and poster.
+Movie App the shows the popular,top-rated,upcoming and now playing movies along with release date, Details, and poster.
 Future iterations will include movie search,in depth details, video etc.
 
 
