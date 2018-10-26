@@ -31,7 +31,7 @@ public class UpcomingActivity extends AppCompatActivity {
 
     private Movie_Adapter upcomingAdapter;
 
-    Retrofit upcomingRetrolfit;
+    Retrofit upcomingRetrofit;
 
     @BindView(R.id.upcoming_rv)
     RecyclerView upcomingRecyclerView;
@@ -50,12 +50,12 @@ public class UpcomingActivity extends AppCompatActivity {
 
     public void setUpcomingRetro() {
 
-        upcomingRetrolfit = new Retrofit.Builder()
+        upcomingRetrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        upcomingNetworking = upcomingRetrolfit.create(NetworkingInterface.class);
+        upcomingNetworking = upcomingRetrofit.create(NetworkingInterface.class);
         Call<Movie_Response> call = upcomingNetworking.getUpcomingMovies(API_KEY);
 
         call.enqueue(new Callback<Movie_Response>() {
