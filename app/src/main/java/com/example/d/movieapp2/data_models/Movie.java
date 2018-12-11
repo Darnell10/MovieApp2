@@ -3,6 +3,7 @@ package com.example.d.movieapp2.data_models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Movie {
@@ -199,6 +200,8 @@ public class Movie {
     }
 
     public String getReleaseDate() {
+
+
         return releaseDate;
     }
 
