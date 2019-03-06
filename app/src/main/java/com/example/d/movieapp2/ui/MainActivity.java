@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent topIntent = new Intent(v.getContext(), TopRatedActivity.class);
                 v.getContext().startActivity(topIntent);
 
+
             }
         });
     }
