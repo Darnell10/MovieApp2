@@ -7,7 +7,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface NetworkingInterface {
+public interface MovieService {
 
     String API_KEY = "05064d0ea0a59b3c717097a5d3851776";
 

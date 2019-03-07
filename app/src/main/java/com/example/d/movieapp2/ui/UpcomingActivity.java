@@ -10,7 +10,7 @@ import com.example.d.movieapp2.Adapter.Movie_Adapter;
 import com.example.d.movieapp2.R;
 import com.example.d.movieapp2.data_models.Movie;
 import com.example.d.movieapp2.data_models.Movie_Response;
-import com.example.d.movieapp2.networking.NetworkingInterface;
+import com.example.d.movieapp2.networking.MovieService;
 
 import java.util.List;
 
@@ -22,12 +22,12 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.example.d.movieapp2.networking.NetworkingInterface.API_KEY;
-import static com.example.d.movieapp2.networking.NetworkingInterface.BASE_URL;
+import static com.example.d.movieapp2.networking.MovieService.API_KEY;
+import static com.example.d.movieapp2.networking.MovieService.BASE_URL;
 
 public class UpcomingActivity extends AppCompatActivity {
 
-    private NetworkingInterface upcomingNetworking;
+    private MovieService upcomingNetworking;
 
     private Movie_Adapter upcomingAdapter;
 
@@ -55,7 +55,7 @@ public class UpcomingActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        upcomingNetworking = upcomingRetrofit.create(NetworkingInterface.class);
+        upcomingNetworking = upcomingRetrofit.create(MovieService.class);
         Call<Movie_Response> call = upcomingNetworking.getUpcomingMovies(API_KEY);
 
         call.enqueue(new Callback<Movie_Response>() {
