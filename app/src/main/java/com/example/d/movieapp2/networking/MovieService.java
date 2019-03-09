@@ -1,6 +1,5 @@
 package com.example.d.movieapp2.networking;
 
-import com.example.d.movieapp2.data_models.Movie;
 import com.example.d.movieapp2.data_models.Movie_Response;
 
 import retrofit2.Call;
