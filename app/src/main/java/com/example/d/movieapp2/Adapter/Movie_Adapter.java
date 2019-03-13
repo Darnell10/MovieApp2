@@ -71,6 +71,8 @@ public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.Movie_Hold
             String urlPath = "https://image.tmdb.org/t/p/w500" + movieResult.getPosterPath();
             Picasso.with(itemView.getContext())
                     .load(urlPath)
+                    .placeholder(R.drawable.movie_informant)
+                    .error(R.drawable.movie_informant)
                     .into(movieImage);
         }
     }
