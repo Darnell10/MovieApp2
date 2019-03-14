@@ -6,7 +6,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.example.d.movieapp2.Adapter.Movie_Adapter;
+import com.example.d.movieapp2.controller.Movie_Adapter;
 import com.example.d.movieapp2.R;
 import com.example.d.movieapp2.data_models.Movie;
 import com.example.d.movieapp2.data_models.Movie_Response;
