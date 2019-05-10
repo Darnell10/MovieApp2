@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.NewMainActivity"></activity>
+        <activity android:name=".ui.NewNowPlayingActivity"></activity>
+        <activity android:name=".ui.NewMainActivity" />
         <activity
             android:name=".ui.NewAppSplashScreen"
             android:theme="@style/SplashScreenTheme">
@@ -27,7 +28,7 @@
         <activity android:name=".ui.TopRatedActivity" />
         <activity android:name=".ui.NowPlayingActivity" />
         <activity android:name=".ui.UpcomingActivity" />
-        <activity android:name=".ui.MainActivity"></activity>
+        <activity android:name=".ui.MainActivity" />
     </application>
 
 </manifest>
