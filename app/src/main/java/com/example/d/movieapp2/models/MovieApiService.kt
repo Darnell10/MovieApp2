@@ -1,6 +1,5 @@
 package com.example.d.movieapp2.models
 
-import com.example.d.movieapp2.data_models.Movie_Response
 import io.reactivex.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
