@@ -3,7 +3,7 @@ package com.example.d.movieapp2.models
 import com.google.gson.annotations.SerializedName
 
 
-data class Movie_Model(
+data class MovieModel(
 
         @SerializedName("vote_count")
         val vote_count: Int?,
@@ -48,10 +48,10 @@ data class Movie_Model(
         val releaseDate: String?
 ) {}
 
-data class Movie_Response(
+data class MovieResponse(
 
         @SerializedName("results")
-        val results: ArrayList<Movie_Model>?,
+        val results: ArrayList<MovieModel>?,
 
         @SerializedName("total_pages")
         val totalPages: Int?,

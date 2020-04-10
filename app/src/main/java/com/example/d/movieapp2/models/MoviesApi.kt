@@ -1,8 +1,6 @@
 package com.example.d.movieapp2.models
 
-import com.example.d.movieapp2.data_models.Movie_Response
 import io.reactivex.Single
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 

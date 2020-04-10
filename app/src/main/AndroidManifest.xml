@@ -13,10 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.NewNowPlayingActivity"></activity>
-        <activity android:name=".ui.NewMainActivity" />
+        <activity android:name=".view.MainActivity"></activity>
         <activity
-            android:name=".ui.NewAppSplashScreen"
+            android:name=".view.NewAppSplashScreen"
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,11 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Popular_Activity" />
-        <activity android:name=".ui.TopRatedActivity" />
-        <activity android:name=".ui.NowPlayingActivity" />
-        <activity android:name=".ui.UpcomingActivity" />
-        <activity android:name=".ui.MainActivity" />
     </application>
 
 </manifest>
