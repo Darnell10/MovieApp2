@@ -19,19 +19,19 @@ class MovieApiService {
             .create(MoviesApi::class.java)
 
 
-    fun getNowPlaying(): Single<List<Movie_Response>> {
+    fun getNowPlaying(): Single<List<MovieResponse>> {
         return apiService.getNowPlaying(API_KEY)
     }
 
-    fun getTopratedMovies(): Single<List<Movie_Response>> {
+    fun getTopratedMovies(): Single<List<MovieResponse>> {
         return apiService.getTopratedMovies(API_KEY)
     }
 
-    fun getPopularMovies(): Single<List<Movie_Response>> {
+    fun getPopularMovies(): Single<List<MovieResponse>> {
         return apiService.getPopularMovies(API_KEY)
     }
 
-    fun getUpcomingMovies(): Single<List<Movie_Response>> {
+    fun getUpcomingMovies(): Single<List<MovieResponse>> {
         return apiService.getUpcomingMovies(API_KEY)
     }
 

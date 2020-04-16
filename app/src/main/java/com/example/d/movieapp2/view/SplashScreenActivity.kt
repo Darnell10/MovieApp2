@@ -3,10 +3,10 @@ package com.example.d.movieapp2.view
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.d.movieapp2.R
 
-class NewAppSplashScreen : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity() {
 
     private val SPLASHTIME: Long = 3000
 

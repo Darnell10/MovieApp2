@@ -7,15 +7,15 @@ import retrofit2.http.Query
 interface MoviesApi {
 
     @GET("movie/popular")
-    fun getPopularMovies(@Query("api_key") apiKey: String?): Single<List<Movie_Response>>
+    fun getPopularMovies(@Query("api_key") apiKey: String?): Single<List<MovieResponse>>
 
     @GET("movie/top_rated")
-    fun getTopratedMovies(@Query("api_key") apiKey: String?): Single<List<Movie_Response>>
+    fun getTopratedMovies(@Query("api_key") apiKey: String?): Single<List<MovieResponse>>
 
     @GET("movie/now_playing")
-    fun getNowPlaying(@Query("api_key") apiKey: String?): Single<List<Movie_Response>>
+    fun getNowPlaying(@Query("api_key") apiKey: String?): Single<List<MovieResponse>>
 
     @GET("movie/upcoming")
-    fun getUpcomingMovies(@Query("api_key") apiKey: String?): Single<List<Movie_Response>>
+    fun getUpcomingMovies(@Query("api_key") apiKey: String?): Single<List<MovieResponse>>
 
 }
