@@ -69,6 +69,9 @@ dependencies {
     //palette
     implementation "com.android.support:palette-v7:$supportVersion"
 
+    //Sharedprefs
+    implementation "androidx.preference:preference-ktx:1.1.0"
+
     //Dagger
     implementation "com.google.dagger:dagger:$daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
