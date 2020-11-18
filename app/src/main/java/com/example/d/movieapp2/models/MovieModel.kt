@@ -1,13 +1,18 @@
 package com.example.d.movieapp2.models
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-
+@Entity
 data class MovieModel(
+
 
         @SerializedName("vote_count")
         val vote_count: Int?,
 
+        @ColumnInfo(name = "id")
         @SerializedName("id")
         val id: Int?,
 
@@ -17,6 +22,7 @@ data class MovieModel(
         @SerializedName("vote_average")
         val voteAverage: Float?,
 
+        @ColumnInfo(name = "title")
         @SerializedName("title")
         val title: String?,
 
@@ -41,12 +47,17 @@ data class MovieModel(
         @SerializedName("adult")
         val adult: Boolean?,
 
+        @ColumnInfo(name = "overview")
         @SerializedName("overview")
         val overview: String?,
 
+        @ColumnInfo(name = "release_date")
         @SerializedName("release_date")
         val releaseDate: String?
-) {}
+) {
+    @PrimaryKey(autoGenerate = true)
+    var uuid: Int = 0
+}
 
 data class MovieResponse(
 
