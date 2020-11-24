@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:shape = "rectangle">
+
+    <corners
+        android:topLeftRadius = "20dip"
+        android:topRightRadius = "20dip"
+        android:bottomLeftRadius = "20dip"
+        android:bottomRightRadius = "20dip"
+        tools:ignore="StateListReachable" />
+
+    <padding
+        android:bottom = "7dp"
+        android:top = "7dp"
+        android:left = "10dp"
+        android:right = "10dp"
+        tools:ignore="StateListReachable" />
+
+
+    <solid android:color = "#f9f9f9"/>
+
+</shape>

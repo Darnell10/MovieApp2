@@ -17,7 +17,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
-        tools:context="com.example.d.movieapp2.view.fragments.DetailFragment">
+        tools:context="com.example.d.movieapp2.view.fragments.DetailFragment"
+        >
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"

@@ -1,5 +1,6 @@
-package com.example.d.movieapp2.models
+package com.example.d.movieapp2.api
 
+import com.example.d.movieapp2.models.MovieResponse
 import io.reactivex.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

@@ -1,5 +1,6 @@
-package com.example.d.movieapp2.models
+package com.example.d.movieapp2.api
 
+import com.example.d.movieapp2.models.MovieResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
